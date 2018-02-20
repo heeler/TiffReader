@@ -1,13 +1,13 @@
-#TiffReader
+# TiffReader
 
-###Premise
+### Premise
 This is a simple proof of principle to enable writing custom tags to an OMItiff
 
-###Dependencies
+### Dependencies
 boost::gil (this is also known as the adobe image library)
 libtiff (this is the underlying tiff support library that seems to be prevalent)
 
-###Custom Tags
+### Custom Tags
 Reading custom tags requires no extension of the dictionary but if you wish to write them it is necessary to update the dictionary using TIFFMergeFieldInfo.
 
 There's a really weird block in the libtiff in 
@@ -32,6 +32,6 @@ turn triggers a segmentation fault. If you name your custom tag ANYTHING
 EXCEPT "Tag *" the program added tags work perfectly. I'm not sure why this 
 block exists but I was unlucky enough to make this mistake. 
 
-###Build tool
+### Build tool
 This application uses CMake to build. 
 
